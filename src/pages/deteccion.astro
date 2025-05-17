@@ -1,0 +1,20 @@
+---
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detección de Objetos en Vivo</title>
+    <link rel="stylesheet" href="/deteccion.css" />
+  </head>
+  <body>
+    <h1>Detección de Objetos en Vivo</h1>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas"></canvas>
+    <div id="status">Cargando modelo...</div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script type="module" src="/deteccion.js"></script>
+  </body>
+</html>
