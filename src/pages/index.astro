@@ -3,15 +3,13 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h1>AstroImage Portafolio</h1>
-  <nav>
-    <ul style="list-style:none;display:flex;gap:2rem;justify-content:center;padding:0;">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/deteccion">Detección de Objetos</a></li>
-      <!-- Agrega más enlaces aquí para nuevos proyectos -->
-    </ul>
-  </nav>
-  <main style="margin-top:2rem;">
-    <p>Bienvenido a tu portafolio multipágina con Astro.<br />Selecciona un proyecto en el menú para comenzar.</p>
-  </main>
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:70vh;">
+    <img src="/astro-home-ai.svg" alt="Portafolio AI" style="max-width:320px;margin-bottom:2rem;box-shadow:0 0 32px #0004;border-radius:1rem;" />
+    <h1 style="font-family:'Segoe UI',SegoeUI,Arial,sans-serif;font-size:2.5rem;font-weight:700;letter-spacing:0.02em;">AstroImage Portafolio</h1>
+    <p style="font-size:1.2rem;max-width:500px;margin:1rem auto 0 auto;line-height:1.6;">
+      Hice este proyecto en Astro como aprendizaje y le agregué algunas cosas de visión por computador también como práctica.<br />
+      El código está disponible en <a href="https://github.com/edwinduquerespaldo/detection" target="_blank" style="color:#eebbc3;text-decoration:underline;">GitHub</a> por si te interesa.<br />
+      Explora los proyectos desde el menú superior.
+    </p>
+  </div>
 </Layout>

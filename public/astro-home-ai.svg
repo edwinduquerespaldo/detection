@@ -1,0 +1,19 @@
+<svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="220" rx="32" fill="#232946"/>
+  <ellipse cx="160" cy="120" rx="90" ry="70" fill="#eebbc3" fill-opacity="0.15"/>
+  <ellipse cx="160" cy="120" rx="60" ry="45" fill="#eebbc3" fill-opacity="0.25"/>
+  <g>
+    <circle cx="160" cy="110" r="48" fill="#eebbc3"/>
+    <ellipse cx="160" cy="110" rx="38" ry="44" fill="#fff" fill-opacity="0.9"/>
+    <ellipse cx="160" cy="110" rx="28" ry="34" fill="#eebbc3" fill-opacity="0.7"/>
+    <ellipse cx="160" cy="110" rx="18" ry="22" fill="#fff" fill-opacity="0.9"/>
+    <ellipse cx="160" cy="110" rx="8" ry="10" fill="#232946"/>
+    <ellipse cx="164" cy="106" rx="2" ry="3" fill="#fff" fill-opacity="0.7"/>
+  </g>
+  <g>
+    <rect x="120" y="160" width="80" height="18" rx="9" fill="#eebbc3" fill-opacity="0.7"/>
+    <rect x="140" y="178" width="40" height="8" rx="4" fill="#eebbc3" fill-opacity="0.5"/>
+  </g>
+  <text x="50%" y="40" text-anchor="middle" fill="#fff" font-size="1.5rem" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">AI Vision</text>
+  <text x="50%" y="60" text-anchor="middle" fill="#eebbc3" font-size="1rem" font-family="Segoe UI, Arial, sans-serif">Portafolio Astro</text>
+</svg>

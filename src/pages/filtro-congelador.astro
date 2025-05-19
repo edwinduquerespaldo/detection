@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section style="max-width:700px;margin:2rem auto 0 auto;padding:2rem 1rem 1rem 1rem;background:#232946;border-radius:1rem;box-shadow:0 0 24px #0002;">
+    <h1 style="font-size:2rem;margin-bottom:0.5rem;">Filtro Congelador (TikTok Style)</h1>
+    <p style="font-size:1.1rem;line-height:1.6;margin-bottom:2rem;">
+      Selecciona el modo (horizontal o vertical) y presiona iniciar. La línea divide la imagen de la cámara: la parte "congelada" queda fija y la otra sigue en vivo, como algunos filtros populares de TikTok.
+    </p>
+    <div style="display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem;">
+      <label for="modo" style="font-size:1.1rem;">Modo:</label>
+      <select id="modo" style="font-size:1.1rem;padding:0.2rem 0.5rem;">
+        <option value="horizontal">Horizontal</option>
+        <option value="vertical">Vertical</option>
+      </select>
+      <button id="startBtn" style="font-size:1.1rem;padding:0.3rem 1.2rem;border-radius:0.5rem;background:#eebbc3;color:#232946;border:none;font-weight:bold;cursor:pointer;">Iniciar</button>
+    </div>
+    <div style="display:flex;justify-content:center;">
+      <canvas id="freezeCanvas" width="480" height="360" style="border-radius:1rem;box-shadow:0 0 16px #0004;background:#000;"></canvas>
+    </div>
+    <video id="freezeVideo" autoplay playsinline style="display:none;"></video>
+    <script type="module" src="/freeze.js"></script>
+  </section>
+</Layout>

@@ -1,16 +1,24 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
 
-<link rel="stylesheet" href="/laberinto.css" />
-<div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 2rem; margin-top: 2rem;">
-  <div>
-    <h2>Reconocimiento de Nariz</h2>
-    <canvas id="canvas" style="display:block;"></canvas>
-    <div id="status">Cargando modelo...</div>
-  </div>
-  <div>
-    <h2>Laberinto</h2>
-    <canvas id="maze" width="300" height="300" style="background:#fff;display:block;"></canvas>
-  </div>
-</div>
-<script type="module" src="/laberinto.js"></script>
+<Layout>
+  <section style="max-width:700px;margin:2rem auto 0 auto;padding:2rem 1rem 1rem 1rem;background:#232946;border-radius:1rem;box-shadow:0 0 24px #0002;">
+    <h1 style="font-size:2rem;margin-bottom:0.5rem;">Laberinto con Reconocimiento de Nariz</h1>
+    <p style="font-size:1.1rem;line-height:1.6;margin-bottom:2rem;">
+      En este proyecto puedes controlar un jugador dentro de un laberinto moviendo tu cabeza frente a la cámara. Utiliza inteligencia artificial para detectar la posición de tu nariz y traducirla en movimientos dentro del juego. Haz doble clic en el canvas para recalibrar el centro si es necesario.
+    </p>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 2rem; margin-top: 2rem;">
+      <div>
+        <h2 style="font-size:1.2rem;">Reconocimiento de Nariz</h2>
+        <canvas id="canvas" style="display:block;"></canvas>
+        <div id="status">Cargando modelo...</div>
+      </div>
+      <div>
+        <h2 style="font-size:1.2rem;">Laberinto</h2>
+        <canvas id="maze" width="300" height="300" style="background:#fff;display:block;"></canvas>
+      </div>
+    </div>
+    <script type="module" src="/laberinto.js"></script>
+  </section>
+</Layout>
