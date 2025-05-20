@@ -3,6 +3,8 @@ const canvas = document.getElementById('canvas');
 const statusDiv = document.getElementById('status');
 const ctx = canvas.getContext('2d');
 let model = null;
+// Lista de objetos detectados únicos (más recientes arriba)
+let detectedObjects = [];
 
 async function setupCamera() {
   const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -40,6 +42,17 @@ async function detectFrame() {
   requestAnimationFrame(detectFrame);
 }
 
+function updateObjectList() {
+  const listDiv = document.getElementById('object-list');
+  if (!listDiv) return;
+  if (detectedObjects.length === 0) {
+    listDiv.innerHTML = '<em>No se han detectado objetos con alta confianza aún.</em>';
+    return;
+  }
+  listDiv.innerHTML = '<b>Objetos detectados (&gt;90%):</b><ul style="margin:0.5rem 0 0 0;padding-left:1.2rem;">' +
+    detectedObjects.map(obj => `<li><span style='color:#fff;'>${obj.name}</span> <span style='font-size:0.95em;color:#7be495;'>(${obj.score}%)</span></li>`).join('') + '</ul>';
+}
+
 function drawPredictions(predictions) {
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   predictions.forEach(pred => {
@@ -49,7 +62,20 @@ function drawPredictions(predictions) {
     ctx.font = '16px Arial';
     ctx.fillStyle = '#00FF00';
     ctx.fillText(pred.class + ' (' + Math.round(pred.score * 100) + '%)', pred.bbox[0], pred.bbox[1] > 20 ? pred.bbox[1] - 5 : 10);
+    // --- Listado de objetos únicos con score > 90% ---
+    if (pred.score >= 0.9) {
+      const name = pred.class;
+      // Si ya existe, lo movemos arriba (más reciente)
+      const idx = detectedObjects.findIndex(obj => obj.name === name);
+      if (idx !== -1) {
+        detectedObjects.splice(idx, 1);
+      }
+      detectedObjects.unshift({ name, score: Math.round(pred.score * 100) });
+      // Limitar a 15 objetos únicos
+      if (detectedObjects.length > 15) detectedObjects.length = 15;
+    }
   });
+  updateObjectList();
 }
 
 async function main() {
