@@ -1,15 +1,15 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="64" height="64" rx="16" fill="#232946"/>
-  <ellipse cx="32" cy="34" rx="22" ry="17" fill="#eebbc3" fill-opacity="0.15"/>
-  <ellipse cx="32" cy="34" rx="15" ry="11" fill="#eebbc3" fill-opacity="0.25"/>
+  <ellipse cx="32" cy="34" rx="22" ry="17" fill="#FF9F6B" fill-opacity="0.15"/>
+  <ellipse cx="32" cy="34" rx="15" ry="11" fill="#FF9F6B" fill-opacity="0.25"/>
   <g>
-    <circle cx="32" cy="30" r="16" fill="#eebbc3"/>
+    <circle cx="32" cy="30" r="16" fill="#FF9F6B"/>
     <ellipse cx="32" cy="30" rx="12" ry="14" fill="#fff" fill-opacity="0.9"/>
-    <ellipse cx="32" cy="30" rx="8" ry="10" fill="#eebbc3" fill-opacity="0.7"/>
+    <ellipse cx="32" cy="30" rx="8" ry="10" fill="#FF9F6B" fill-opacity="0.7"/>
     <ellipse cx="32" cy="30" rx="5" ry="6" fill="#fff" fill-opacity="0.9"/>
     <ellipse cx="32" cy="30" rx="2" ry="3" fill="#232946"/>
     <ellipse cx="33" cy="29" rx="0.7" ry="1" fill="#fff" fill-opacity="0.7"/>
   </g>
-  <rect x="22" y="44" width="20" height="4" rx="2" fill="#eebbc3" fill-opacity="0.7"/>
-  <rect x="27" y="50" width="10" height="2" rx="1" fill="#eebbc3" fill-opacity="0.5"/>
+  <rect x="22" y="44" width="20" height="4" rx="2" fill="#FF9F6B" fill-opacity="0.7"/>
+  <rect x="27" y="50" width="10" height="2" rx="1" fill="#FF9F6B" fill-opacity="0.5"/>
 </svg>

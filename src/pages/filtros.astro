@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section style="max-width:700px;margin:2rem auto 0 auto;padding:2rem 1rem 1rem 1rem;background:#232946;border-radius:1rem;box-shadow:0 0 24px #0002;">
+    <h1 style="font-size:2rem;margin-bottom:0.5rem;">Filtros Faciales en Tiempo Real</h1>
+    <p style="font-size:1.1rem;line-height:1.6;margin-bottom:2rem;">
+      Prueba diferentes filtros interactivos que siguen el movimiento de tu rostro usando IA en el navegador. Selecciona un filtro y mueve tu cabeza para ver el efecto.
+    </p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;">
+      <div style="position:relative;width:320px;height:240px;">
+        <video id="filtros-video" width="320" height="240" autoplay playsinline style="border-radius:1rem;background:#232946;box-shadow:0 2px 12px #0002;position:absolute;left:0;top:0;"></video>
+        <canvas id="filtros-canvas" width="320" height="240" style="position:absolute;left:0;top:0;pointer-events:none;"></canvas>
+      </div>      <div style="margin-top:1rem;">
+        <label style="color:#FF9F6B;">Filtro:</label>
+        <select id="filtro-select" style="margin-left:1rem;padding:0.3rem 1rem;border-radius:0.5rem;font-size:1rem;">
+          <option value="puntos">Solo puntos</option>
+          <option value="gafas">Gafas</option>
+          <option value="sombrero">Sombrero</option>
+        </select>
+      </div>
+      <div id="filtros-status" style="margin-top:1rem;color:#FF9F6B;">Cargando modelo...</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.12.2/dist/ml5.min.js"></script>
+    <script type="module" src="/filtros-faciales.js"></script>
+  </section>
+</Layout>
